@@ -4,8 +4,8 @@ import { RouteProp, useNavigation, useRoute } from '@react-navigation/native'
 import { RootStackParams } from '../../../routes/HomeStackNavigator'
 import { getPlanetById } from '../../../../services/swapiService'
 import { useQuery } from '@tanstack/react-query'
-import { translatePlanetAttributes } from '../../../../utils/translateData'
-import { Planet, PlanetsResponse } from '../../../../types/types'
+import { translatePlanetAttributes } from '../../../../utils/translatePlanetsData'
+import { Planet, Planeta, PlanetsResponse } from '../../../../types/types'
 import { colors, golbalStyles } from '../../../../theme/theme'
 import DetailRow from '../../atoms/DetailRow'
 
@@ -14,7 +14,7 @@ const PlanetScreen = () => {
   const navigation = useNavigation()
   const params = useRoute<RouteProp<RootStackParams,'Planet'>>().params
   
-  const { data: planet, isLoading, error } = useQuery<Planet>({
+  const { data: planet, isLoading, error } = useQuery<Planeta>({
     queryKey: ['planet'],
     queryFn: async () => {
       const response = await getPlanetById(params.url);

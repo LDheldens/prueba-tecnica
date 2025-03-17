@@ -34,7 +34,7 @@ const FilmsScreen = () => {
       <FlatList
         data={products}
         renderItem={({item})=>(
-          <PrimaryButton style={{marginBottom:10}} label={item.name} onPress={()=>navigation.navigate('Film',{id:item.id})}/>
+          <PrimaryButton style={{marginBottom:10}} label={item.name} onPress={()=>navigation.navigate('Film',{id:item.})}/>
         )}
       />
       <Text style={{marginBottom:10,fontSize:30}}>Ajustes df</Text>

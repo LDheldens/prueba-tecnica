@@ -1,7 +1,7 @@
 
-import { Planet } from '../types/types';
+import { Planeta, Planet } from '../types/types';
 
-const translations: { [key: string]: keyof Planet } = {
+const translations: { [key: string]: keyof Planeta } = {
   name: 'nombre',
   rotation_period: 'periodo_de_rotacion',
   orbital_period: 'periodo_orbital',
@@ -19,8 +19,8 @@ const translations: { [key: string]: keyof Planet } = {
 };
 
 
-export const translatePlanetAttributes = (data: Planet): Planet => {
-  const translatedData: Partial<Planet> = {};
+export const translatePlanetAttributes = (data: Planet): Planeta => {
+  const translatedData: Partial<Planeta> = {};
 
   Object.keys(data).forEach((key) => {
     const translatedKey = translations[key];
@@ -33,5 +33,8 @@ export const translatePlanetAttributes = (data: Planet): Planet => {
     }
   });
 
-  return translatedData as Planet;
+  return translatedData as Planeta;
 };
+
+
+

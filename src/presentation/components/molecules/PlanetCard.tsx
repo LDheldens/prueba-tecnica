@@ -3,11 +3,11 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Text } from 'react-native';
 import PrimaryButton from '../atoms/PrimaryButton';
-import { Planet } from '../../../types/types';
+import { Planet, Planeta } from '../../../types/types';
 import { colors, golbalStyles } from '../../../theme/theme';
 
 interface PlanetCardProps {
-  planet:Planet
+  planet:Planeta
   onPress: () => void;
 }
 

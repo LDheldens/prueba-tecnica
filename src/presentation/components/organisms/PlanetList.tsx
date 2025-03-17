@@ -2,10 +2,10 @@
 import React from 'react';
 import { FlatList } from 'react-native';
 import PlanetCard from '../molecules/PlanetCard';
-import { Planet } from '../../../types/types';
+import { Planet, Planeta } from '../../../types/types';
 
 interface PlanetListProps {
-  planets?: Planet[];
+  planets?: Planeta[];
   onPress: (url: string) => void;
 }
 

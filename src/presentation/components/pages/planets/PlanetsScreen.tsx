@@ -8,7 +8,7 @@ import { useQuery } from '@tanstack/react-query'
 import { PlanetsResponse } from '../../../../types/types'
 import PlanetList from '../../organisms/PlanetList'
 import SecondaryButton from '../../atoms/SecondaryButton'
-import { translatePlanetAttributes } from '../../../../utils/translateData'
+import { translatePlanetAttributes } from '../../../../utils/translatePlanetsData'
 
 const PlanetsScreen = () => {
 
