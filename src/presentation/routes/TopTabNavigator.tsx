@@ -1,7 +1,7 @@
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import FilmsScreen from '../screens/films/FilmsScreen';
-import PlanetsScreen from '../screens/planets/PlanetsScreen';
-import PeopleScreen from '../screens/people/PeopleScreen';
+import FilmsScreen from '../components/pages/films/FilmsScreen';
+import PlanetsScreen from '../components/pages/planets/PlanetsScreen';
+import PeopleScreen from '../components/pages/people/PeopleScreen';
 import { colors } from '../../theme/theme';
 import { Text } from 'react-native';
 

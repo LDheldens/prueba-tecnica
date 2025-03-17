@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React, { useEffect } from 'react'
 import { RouteProp, useNavigation,useRoute } from '@react-navigation/native'
-import { RootStackParams } from '../../routes/HomeStackNavigator'
+import { RootStackParams } from '../../../routes/HomeStackNavigator'
 
 const FilmScreen = () => {
 

@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { colors } from '../../theme/theme';
-import Tab2Screen from '../screens/tabs/Tab2Screen';
+import Tab2Screen from '../components/pages/tabs/Tab2Screen';
 import HomeStackNavigator from './HomeStackNavigator';
 
 const Tab = createBottomTabNavigator();
@@ -11,6 +11,7 @@ export const BottomTabNavigator = () => {
       screenOptions={{
         sceneStyle: {
           backgroundColor: colors.background,
+          
         },
         tabBarIconStyle:{
           display:'none'

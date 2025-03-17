@@ -1,5 +1,5 @@
 import { createDrawerNavigator, DrawerContentComponentProps, DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
-import HomeScreen from '../screens/home/HomeScreen';
+import HomeScreen from '../components/pages/home/HomeScreen';
 import StackNavigator from './HomeStackNavigator';
 import { golbalStyles,colors } from '../../theme/theme';
 import { View,useWindowDimensions } from 'react-native';

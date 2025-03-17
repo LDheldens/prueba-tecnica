@@ -1,9 +1,9 @@
 import { View, Text, FlatList } from 'react-native'
 import React from 'react'
-import { golbalStyles } from '../../../theme/theme'
-import PrimaryButton from '../../components/shared/PrimaryButton'
+import { golbalStyles } from '../../../../theme/theme'
+import PrimaryButton from '../../atoms/PrimaryButton'
 import { NavigationProp, useNavigation } from '@react-navigation/native'
-import { RootStackParams } from '../../routes/HomeStackNavigator'
+import { RootStackParams } from '../../../routes/HomeStackNavigator'
 
 const products = [
   {

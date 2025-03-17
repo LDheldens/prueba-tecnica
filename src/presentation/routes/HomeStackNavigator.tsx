@@ -1,11 +1,11 @@
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from '../screens/home/HomeScreen';
-import PeopleScreen from '../screens/people/PeopleScreen';
-import PersonDetailScreen from '../screens/people/PersonDetailScreen';
-import FilmsScreen from '../screens/films/FilmsScreen';
-import FilmScreen from '../screens/films/FilmScreen';
-import PlanetsScreen from '../screens/planets/PlanetsScreen';
-import PlanetScreen from '../screens/planets/PlanetScreen';
+import HomeScreen from '../components/pages/home/HomeScreen';
+import PeopleScreen from '../components/pages/people/PeopleScreen';
+import PersonDetailScreen from '../components/pages/people/PersonDetailScreen';
+import FilmsScreen from '../components/pages/films/FilmsScreen';
+import FilmScreen from '../components/pages/films/FilmScreen';
+import PlanetsScreen from '../components/pages/planets/PlanetsScreen';
+import PlanetScreen from '../components/pages/planets/PlanetScreen';
 import { useEffect } from 'react';
 import { useNavigation } from '@react-navigation/native';
 
@@ -13,15 +13,15 @@ export type RootStackParams = {
   Home:undefined,
   Planets:undefined,
   Planet:{
-    id:number
+    url:string
   },
   Films:undefined,
   Film:{
-    id:number
+    url:string
   },
   People:undefined,
   PersonDetail:{
-    id:number
+    url:string
   },
 }
 

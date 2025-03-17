@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import { golbalStyles } from '../../../theme/theme'
+import { golbalStyles } from '../../../../theme/theme'
 
 const PeopleScreen = () => {
   return (

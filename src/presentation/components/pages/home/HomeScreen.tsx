@@ -2,8 +2,8 @@ import { View, Text, Pressable, StyleSheet, useWindowDimensions } from 'react-na
 import React, { useEffect } from 'react'
 import { DrawerActions, NavigationProp, useNavigation } from '@react-navigation/native'
 
-import TopTabNavigator from '../../routes/TopTabNavigator'
-import { RootStackParams } from '../../routes/HomeStackNavigator'
+import TopTabNavigator from '../../../routes/TopTabNavigator'
+import { RootStackParams } from '../../../routes/HomeStackNavigator'
 
 const HomeScreen = () => {
   const navigation = useNavigation<NavigationProp<RootStackParams>>()

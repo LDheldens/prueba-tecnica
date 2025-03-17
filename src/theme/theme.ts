@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export const colors = {
     primary:'#07294D',
     secondary:'#FFC600',
-    tertiary:'#3a0ca3',
+    tertiary:'#021D3A',
     success:'#8B008B',
     warning:'#fca311',
     danger:'#e71d36',
@@ -18,9 +18,17 @@ export const golbalStyles = StyleSheet.create({
         backgroundColor:colors.background
     },
     primaryButton:{
-        backgroundColor:colors.primary,
+        backgroundColor:colors.secondary,
         borderRadius:5,
         padding:10,
+        width:'100%',
+        alignItems:'center',
+    },
+    SecondaryButtonButton:{
+        backgroundColor:colors.tertiary,
+        borderRadius:20,
+        paddingHorizontal:30,
+        paddingVertical:8,
         width:'100%',
         alignItems:'center',
     },
@@ -32,18 +40,25 @@ export const golbalStyles = StyleSheet.create({
         fontSize: 32, 
         fontWeight: 'bold', 
         color: colors.dark, 
-        marginBottom: 16, 
-      },
-      title2: {
-        fontSize: 24, 
-        fontWeight: '600',
-        color: colors.dark, 
-        marginBottom: 12, 
-      },
-      title3: {
-        fontSize: 18,
-        fontWeight: 'normal', 
-        color: colors.dark, 
-        marginBottom: 8, 
-      },
+        marginBottom: 16,
+        textAlign:'center' 
+    },
+    title2: {
+      fontSize: 24, 
+      fontWeight: '600',
+      color: colors.dark, 
+      marginBottom: 12,
+      textAlign:'center' 
+    },
+    title3: {
+      fontSize: 18,
+      fontWeight: 'normal', 
+      color: colors.dark, 
+      marginBottom: 8,
+      textAlign:'center' 
+    },
+    fontBold:{
+        fontWeight:'bold'
+    },
+
 })
