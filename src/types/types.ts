@@ -77,8 +77,7 @@ export interface Pelicula {
 }
 
 //People types
-// Interfaz en inglés
-interface Character {
+export interface Character {
   name: string;
   height: string;
   mass: string;
@@ -97,8 +96,7 @@ interface Character {
   url: string;
 }
 
-// Interfaz en español
-interface Personaje {
+export interface Personaje {
   nombre: string;
   altura: string;
   masa: string;
