@@ -15,8 +15,14 @@ export const getPlanets = async (page:number):Promise<PlanetsResponse> => {
   return data;
 };
 
-export const getPeople = async () => {
-  const response = await fetch(`${BASE_URL}/people`);
+export const getPeople = async (page:number, search:string = '') => {
+  let url = `${BASE_URL}/people/?page=${page}`;
+  if (search) {
+    url += `&search=${encodeURIComponent(search)}`;
+  }
+
+  const response = await fetch(url);
+  
   const data = await response.json();
   return data;
 };
