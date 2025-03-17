@@ -76,8 +76,51 @@ export interface Pelicula {
   url: string;
 }
 
+//People types
+// Interfaz en inglés
+interface Character {
+  name: string;
+  height: string;
+  mass: string;
+  hair_color: string;
+  skin_color: string;
+  eye_color: string;
+  birth_year: string;
+  gender: string;
+  homeworld: string;
+  films: string[];
+  species: string[];
+  vehicles: string[];
+  starships: string[];
+  created: string;
+  edited: string;
+  url: string;
+}
+
+// Interfaz en español
+interface Personaje {
+  nombre: string;
+  altura: string;
+  masa: string;
+  color_cabello: string;
+  color_piel: string;
+  color_ojos: string;
+  anio_nacimiento: string;
+  genero: string;
+  planeta_natal: string;
+  peliculas: string[];
+  especies: string[];
+  vehiculos: string[];
+  naves_estelares: string[];
+  creado: string;
+  editado: string;
+  url: string;
+}
+
+
 export type PlanetsResponse = PaginatedResponse<Planet>;
 export type PlanetasResponse = PaginatedResponse<Planeta>;
 export type FilmsResponse = PaginatedResponse<Film>;
 export type PeliculasResponse = PaginatedResponse<Pelicula>;
-// export type PeopleResponse = PaginatedResponse<Person>;
+export type PeopleResponse = PaginatedResponse<Character>;
+export type PersonajeResponse = PaginatedResponse<Personaje>;
