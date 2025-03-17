@@ -18,7 +18,7 @@ const PlanetCard = ({ planet, onPress }: PlanetCardProps) => {
       <Text><Text style={golbalStyles.fontBold}>Clima:</Text> {planet.clima}</Text>
       <Text><Text style={golbalStyles.fontBold}>Gravedad:</Text> {planet.gravedad}</Text>
       <Text><Text style={golbalStyles.fontBold}>Terreno:</Text> {planet.terreno}</Text>
-      <PrimaryButton label="Ver Detalles" onPress={onPress} />
+      <PrimaryButton style={{marginTop:10}} label="Ver Detalles" onPress={onPress} />
     </View>
   );
 };
@@ -30,14 +30,6 @@ const styles = StyleSheet.create({
     borderColor: colors.primary,
     borderRadius: 5,
     marginBottom: 10,
-  },
-  title: {
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-  climate: {
-    fontSize: 14,
-    color: '#666666',
   },
 });
 
