@@ -10,7 +10,7 @@ interface Props {
   onPress: (url: string) => void;
 }
 
-const PlanetList = ({ peliculas = [], onPress }: Props) => {
+const FilmList = ({ peliculas = [], onPress }: Props) => {
   return (
     <FlatList
       data={peliculas}
@@ -25,4 +25,4 @@ const PlanetList = ({ peliculas = [], onPress }: Props) => {
   );
 };
 
-export default PlanetList;
+export default FilmList;
