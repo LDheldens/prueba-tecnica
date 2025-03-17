@@ -10,7 +10,12 @@ const DetailRow = ({ label, value='' }:Props) => {
     return (
       <View style={styles.detailRow}>
         <Text style={[styles.texts, { color: '#fff' }]}>{label}: </Text>
-        <Text style={[styles.texts,{ color: colors.secondary}]}>{value}</Text>
+        <Text 
+          style={[styles.texts, { color: colors.secondary, flexShrink: 1 }]}
+          numberOfLines={2} 
+        >
+          {value}
+        </Text>
       </View>
     );
 };
