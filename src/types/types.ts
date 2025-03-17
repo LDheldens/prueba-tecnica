@@ -77,5 +77,7 @@ export interface Pelicula {
 }
 
 export type PlanetsResponse = PaginatedResponse<Planet>;
+export type PlanetasResponse = PaginatedResponse<Planeta>;
+export type FilmsResponse = PaginatedResponse<Film>;
+export type PeliculasResponse = PaginatedResponse<Pelicula>;
 // export type PeopleResponse = PaginatedResponse<Person>;
-// export type FilmsResponse = PaginatedResponse<Film>;

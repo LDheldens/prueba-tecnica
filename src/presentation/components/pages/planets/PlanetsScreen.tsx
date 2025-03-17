@@ -5,7 +5,7 @@ import { RootStackParams } from '../../../routes/HomeStackNavigator'
 import { colors, golbalStyles } from '../../../../theme/theme'
 import { getPeople, getPlanets } from '../../../../services/swapiService'
 import { useQuery } from '@tanstack/react-query'
-import { PlanetsResponse } from '../../../../types/types'
+import { PlanetasResponse, PlanetsResponse } from '../../../../types/types'
 import PlanetList from '../../organisms/PlanetList'
 import SecondaryButton from '../../atoms/SecondaryButton'
 import { translatePlanetAttributes } from '../../../../utils/translatePlanetsData'
@@ -16,7 +16,7 @@ const PlanetsScreen = () => {
 
   const [page,setPage] =useState(1)
 
-  const { data: planets, isLoading, error } = useQuery<PlanetsResponse>({
+  const { data: planets, isLoading, error } = useQuery<PlanetasResponse>({
     queryKey: ['planets', page],
     queryFn: async () => {
       const response = await getPlanets(page);

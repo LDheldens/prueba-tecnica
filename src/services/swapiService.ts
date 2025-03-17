@@ -2,8 +2,8 @@
 const BASE_URL = 'https://swapi.py4e.com/api/';
 import { PlanetsResponse } from "../types/types";
 
-export const getFilms = async () => {
-  const response = await fetch(`${BASE_URL}/films/`);
+export const getFilms = async (page:number) => {
+  const response = await fetch(`${BASE_URL}/films/?page=${page}`);
   const data = await response.json();
   return data;
 };
@@ -33,8 +33,8 @@ export const getPlanetById = async (url: string) => {
   return data;
 };
 
-export const getFilmById = async (id: string) => {
-  const response = await fetch(`${BASE_URL}/films/${id}/`);
+export const getFilmById = async (url: string) => {
+  const response = await fetch(url);
   const data = await response.json();
   return data;
 };
