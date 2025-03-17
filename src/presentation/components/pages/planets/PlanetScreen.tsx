@@ -23,6 +23,7 @@ const PlanetScreen = () => {
 
   useEffect(() => {
     if (planet) {
+      console.log(planet)
       navigation.setOptions({
         title: planet.nombre,
       });
@@ -37,56 +38,48 @@ const PlanetScreen = () => {
       </View>
     )
   }
-
-  if (error || !planet) {
-    return (
-      <View style={[golbalStyles.container, styles.centerContent]}>
-        <Text style={styles.errorText}>Error al cargar el planeta</Text>
-      </View>
-    )
-  }
   
   return (
     <ScrollView style={golbalStyles.container}>
       <View style={styles.card}>
-        <Text style={[golbalStyles.title1, {color: colors.secondary}]}>{planet.nombre}</Text>
+        <Text style={[golbalStyles.title1, {color: colors.secondary}]}>{planet?.nombre}</Text>
         
         <View style={styles.planetImagePlaceholder}>
-          <Text style={styles.planetType}>Terreno: {planet.terreno.split(',')[0]}</Text>
+          <Text style={styles.planetType}>Terreno: {planet?.terreno.split(',')[0]}</Text>
         </View>
         
         <View style={styles.statsContainer}>
           <View style={styles.statItem}>
-            <Text style={styles.statCount}>{planet.diametro}</Text>
+            <Text style={styles.statCount}>{planet?.diametro}</Text>
             <Text style={styles.statLabel}>Diámetro</Text>
           </View>
           <View style={styles.statItem}>
-            <Text style={styles.statCount}>{planet.periodo_orbital}</Text>
+            <Text style={styles.statCount}>{planet?.periodo_orbital}</Text>
             <Text style={styles.statLabel}>Días por año</Text>
           </View>
           <View style={styles.statItem}>
-            <Text style={styles.statCount}>{planet.periodo_de_rotacion}</Text>
+            <Text style={styles.statCount}>{planet?.periodo_de_rotacion}</Text>
             <Text style={styles.statLabel}>Horas por día</Text>
           </View>
         </View>
         
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionTitle}>Información General</Text>
-          <DetailRow label="Clima" value={planet.clima} />
-          <DetailRow label="Gravedad" value={planet.gravedad} />
-          <DetailRow label="Terreno" value={planet.terreno} />
-          <DetailRow label="Agua Superficial" value={planet.agua_superficial} />
+          <DetailRow label="Clima" value={planet?.clima} />
+          <DetailRow label="Gravedad" value={planet?.gravedad} />
+          <DetailRow label="Terreno" value={planet?.terreno} />
+          <DetailRow label="Agua Superficial" value={planet?.agua_superficial} />
         </View>
         
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionTitle}>Población</Text>
-          <DetailRow label="Habitantes" value={planet.poblacion} />
-          <DetailRow label="Residentes conocidos" value={planet.residentes.length.toString()} />
+          <DetailRow label="Habitantes" value={planet?.poblacion} />
+          <DetailRow label="Residentes conocidos" value={planet?.residentes.length.toString()} />
         </View>
         
         <View style={styles.sectionContainer}>
-          <Text style={styles.sectionTitle}>Apariciones</Text>
-          <DetailRow label="Películas" value={planet.peliculas.length.toString()} />
+          <Text style={styles.sectionTitle}>Apariciones en Películas</Text>
+          <DetailRow label="Películas" value={planet?.peliculas.length.toString()} />
         </View>
       </View>
     </ScrollView>
@@ -111,11 +104,7 @@ const styles = StyleSheet.create({
     color: colors.primary,
     fontSize: 16
   },
-  errorText: {
-    color: colors.danger,
-    fontSize: 16,
-    fontWeight: 'bold'
-  },
+
   planetImagePlaceholder: {
     height: 120,
     backgroundColor: colors.tertiary,

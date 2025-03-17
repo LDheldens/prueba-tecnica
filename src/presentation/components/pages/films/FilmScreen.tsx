@@ -23,6 +23,7 @@ const FilmScreen = () => {
 
   useEffect(() => {
     if (film) {
+      console.log(film)
       navigation.setOptions({
         title: film.titulo,
       });
