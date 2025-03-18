@@ -1,10 +1,11 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import { golbalStyles } from '../../../../theme/theme'
 
 const Tab2Screen = () => {
   return (
     <View>
-      <Text>tab2Screen</Text>
+      <Text style={golbalStyles.title1}>Favorites screen in development</Text>
     </View>
   )
 }
