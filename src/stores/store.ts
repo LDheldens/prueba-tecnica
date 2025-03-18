@@ -1,6 +1,6 @@
-// store/store.ts
+
 import { configureStore } from '@reduxjs/toolkit';
-import themeReducer from './slices/themeSlice'; // Ejemplo: Slice para el modo oscuro
+import themeReducer from './slices/themeSlice'; 
 
 export const store = configureStore({
   reducer: {
