@@ -5,11 +5,11 @@ import PeopleList from '../../organisms/PeopleList'
 import { useQuery } from '@tanstack/react-query'
 import { PeopleResponse, PersonajeResponse } from '../../../../types/types'
 import { getPeople } from '../../../../services/swapiService'
-import { FlatList } from 'react-native-gesture-handler'
 import { translateCharacterAttributes } from '../../../../utils/translatePeopleData'
 import { NavigationProp, useNavigation } from '@react-navigation/native'
 import { RootStackParams } from '../../../routes/HomeStackNavigator'
 import SecondaryButton from '../../atoms/SecondaryButton'
+import SearchInput from '../../atoms/SearchInput'
 
 const PeopleScreen = () => {
   const navigation = useNavigation<NavigationProp<RootStackParams>>()
@@ -33,6 +33,7 @@ const PeopleScreen = () => {
   return (
     <View style={golbalStyles.container}>
       <Text style={golbalStyles.title1}>Página: {page}</Text>
+      <SearchInput query={searchTerm} onQueryChange={(query)=>setSearchTerm(query)}/>
       <PeopleList
         personajes={people?.results}
         onPress={(url)=>navigation.navigate('PersonDetail',{url})}
