@@ -1,6 +1,6 @@
 
 const BASE_URL = 'https://swapi.py4e.com/api/';
-import { PlanetsResponse } from "../types/types";
+import { PeopleResponse, PlanetsResponse } from "../types/types";
 
 export const getFilms = async (page:number) => {
   const response = await fetch(`${BASE_URL}/films/?page=${page}`);
@@ -15,7 +15,7 @@ export const getPlanets = async (page:number):Promise<PlanetsResponse> => {
   return data;
 };
 
-export const getPeople = async (page:number, search:string = '') => {
+export const getPeople = async (page:number, search:string = ''):Promise<PeopleResponse> => {
   let url = `${BASE_URL}/people/?page=${page}`;
   if (search) {
     url += `&search=${encodeURIComponent(search)}`;
@@ -27,8 +27,8 @@ export const getPeople = async (page:number, search:string = '') => {
   return data;
 };
 
-export const getPersonById = async (id: string) => {
-  const response = await fetch(`${BASE_URL}/people/${id}/`);
+export const getPersonById = async (url: string) => {
+  const response = await fetch(url);
   const data = await response.json();
   return data;
 };

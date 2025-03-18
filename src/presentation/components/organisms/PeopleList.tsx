@@ -9,7 +9,7 @@ interface Props {
   onPress: (url: string) => void;
 }
 
-const FilmList = ({ personajes = [], onPress }: Props) => {
+const PeopleList = ({ personajes = [], onPress }: Props) => {
   return (
     <FlatList
       data={personajes}
@@ -24,4 +24,4 @@ const FilmList = ({ personajes = [], onPress }: Props) => {
   );
 };
 
-export default FilmList;
+export default PeopleList;
