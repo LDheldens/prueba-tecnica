@@ -1,4 +1,4 @@
-// components/organisms/PlanetList.tsx
+
 import React from 'react';
 import { FlatList } from 'react-native';
 import PlanetCard from '../molecules/PlanetCard';
