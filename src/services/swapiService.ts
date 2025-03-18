@@ -15,14 +15,16 @@ export const getPlanets = async (page:number):Promise<PlanetsResponse> => {
   return data;
 };
 
-export const getPeople = async (page:number, search:string = ''):Promise<PeopleResponse> => {
-  let url = `${BASE_URL}/people/?page=${page}`;
+export const getPeople = async (page: number, search: string = ''): Promise<PeopleResponse> => {
+  let url = `${BASE_URL}/people/`;
+
   if (search) {
-    url += `&search=${encodeURIComponent(search)}`;
+    url += `?search=${encodeURIComponent(search)}`;
+  } else {
+    url += `?page=${page}`;
   }
 
-  const response = await fetch(url);
-  
+  const response = await fetch(url)
   const data = await response.json();
   return data;
 };
