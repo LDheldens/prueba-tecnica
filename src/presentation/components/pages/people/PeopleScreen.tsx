@@ -7,9 +7,11 @@ import { PeopleResponse, PersonajeResponse } from '../../../../types/types'
 import { getPeople } from '../../../../services/swapiService'
 import { FlatList } from 'react-native-gesture-handler'
 import { translateCharacterAttributes } from '../../../../utils/translatePeopleData'
+import { NavigationProp, useNavigation } from '@react-navigation/native'
+import { RootStackParams } from '../../../routes/HomeStackNavigator'
 
 const PeopleScreen = () => {
-
+  const navigation = useNavigation<NavigationProp<RootStackParams>>()
   const [page,setPage] =useState(1)
   const [searchTerm,setSearchTerm] = useState('')
 
@@ -31,7 +33,7 @@ const PeopleScreen = () => {
     <View style={golbalStyles.container}>
       <PeopleList
         personajes={people?.results}
-        onPress={(url)=>console.log(url)}
+        onPress={(url)=>navigation.navigate('PersonDetail',{url})}
       />
     </View>
   )
