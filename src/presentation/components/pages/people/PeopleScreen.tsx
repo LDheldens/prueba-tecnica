@@ -9,6 +9,7 @@ import { FlatList } from 'react-native-gesture-handler'
 import { translateCharacterAttributes } from '../../../../utils/translatePeopleData'
 import { NavigationProp, useNavigation } from '@react-navigation/native'
 import { RootStackParams } from '../../../routes/HomeStackNavigator'
+import SecondaryButton from '../../atoms/SecondaryButton'
 
 const PeopleScreen = () => {
   const navigation = useNavigation<NavigationProp<RootStackParams>>()
@@ -31,10 +32,31 @@ const PeopleScreen = () => {
 
   return (
     <View style={golbalStyles.container}>
+      <Text style={golbalStyles.title1}>Página: {page}</Text>
       <PeopleList
         personajes={people?.results}
         onPress={(url)=>navigation.navigate('PersonDetail',{url})}
       />
+      <View style={golbalStyles.containerButons}>
+        <SecondaryButton
+          disabled={page === 1 || !people?.previous}
+          style={{
+            width: 'auto',
+            opacity: page === 1 || !people?.previous ? 0.6 : 1, 
+          }}
+          label="Prev"
+          onPress={() => setPage((prev) => prev - 1)}
+        />
+        <SecondaryButton
+          disabled={!people?.next}        
+          style={{
+            width: 'auto',
+            opacity: !people?.next ? 0.6 : 1, 
+          }}
+          label="Next"
+          onPress={() => setPage((prev) => prev + 1)}
+        />
+      </View>
     </View>
   )
 }

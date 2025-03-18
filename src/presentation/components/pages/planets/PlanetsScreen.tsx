@@ -40,7 +40,7 @@ const PlanetsScreen = () => {
     <View style={[golbalStyles.container,{paddingBottom:0}]}>
       <Text style={golbalStyles.title1}>Página: {page}</Text>
       <PlanetList onPress={(url)=>navigation.navigate('Planet',{url:url})} planets={planets?.results ?? []}/>
-      <View style={styles.containerButons}>
+      <View style={golbalStyles.containerButons}>
         <SecondaryButton
           disabled={page === 1 || !planets?.previous}
           style={{
@@ -65,14 +65,3 @@ const PlanetsScreen = () => {
 }
 
 export default PlanetsScreen
-
-const styles=StyleSheet.create({
-  containerButons:{
-    flexDirection:'row',
-    gap:10,
-    justifyContent:'center',
-    padding:10,
-    borderTopWidth:1,
-    borderColor:colors.primary
-  }
-})

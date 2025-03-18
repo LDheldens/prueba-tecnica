@@ -60,5 +60,13 @@ export const golbalStyles = StyleSheet.create({
     fontBold:{
         fontWeight:'bold'
     },
+    containerButons:{
+        flexDirection:'row',
+        gap:10,
+        justifyContent:'center',
+        padding:10,
+        borderTopWidth:1,
+        borderColor:colors.primary
+      }
 
 })
